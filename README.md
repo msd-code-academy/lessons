@@ -12,7 +12,7 @@ and even propose improvements to the course itself.
 ### [Introduction](introduction/README.md)
 
  - [Motivation to course](introduction/motivation.md)
- - Git basics
+ - [Git basics](introduction/git_basics.md)
  - Intro to JavaScript world
  - Environment setup
  - React.js crash course
