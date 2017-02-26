@@ -1,4 +1,5 @@
-# Javascript Code Academy
+![Code Academy](/assets/img/js-logo-msd-big.png)
+
 Learning materials for Javascript Code Academy
 
 ## Community
