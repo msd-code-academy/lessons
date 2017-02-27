@@ -85,6 +85,10 @@ TODO
 **More on JavaScript basics:**
 [You Don't Know JS: Up & Going - Chapter 2: Into JavaScript](https://github.com/getify/You-Dont-Know-JS/blob/master/up%20%26%20going/ch2.md)
 
+## Javascript crash course
+
+TODO quick test - fix bugs in code & run tests
+
 ## Useful resources
 
 [MDN](https://developer.mozilla.org/cs/docs/Web/JavaScript/) - Unofficial JavaScript wiki 

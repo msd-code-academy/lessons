@@ -14,9 +14,31 @@ and even propose improvements to the course itself.
 
  - [Motivation to course](introduction/motivation.md)
  - [Git basics](introduction/git_basics.md)
+ - [Environment setup](introduction/environment.md)
  - [Intro to JavaScript world](introduction/intro_to_js.md)
- - Environment setup
  - React.js crash course
+ 
+### React.js basics
+ - JSX & rendering
+ - Handling events
+ - Component lifecycle
+ 
+### Unit testing 
+ 
+### Managing application state - redux
+ - about redux & how it solves app state for us
+ - building effective state architecture
+ 
+### Dealing with async
+ - fetching data
+ - callbacks, promises and beyond
+ - various approaches to async operations in React.js applications
+ 
+### Performance & debugging
+
+### Backend in node.js with express
+ 
+### Deploy
  
 ## About
 
