@@ -14,7 +14,7 @@ and even propose improvements to the course itself.
 
  - [Motivation to course](introduction/motivation.md)
  - [Git basics](introduction/git_basics.md)
- - Intro to JavaScript world
+ - [Intro to JavaScript world](introduction/intro_to_js.md)
  - Environment setup
  - React.js crash course
  
