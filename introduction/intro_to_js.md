@@ -102,6 +102,7 @@ As you can see, tests failed. Can you fix the code so they pass?
 
 - [MDN](https://developer.mozilla.org/cs/docs/Web/JavaScript/) - Unofficial JavaScript wiki 
 - [You don't know JS](https://github.com/getify/You-Dont-Know-JS) - Superb well of all JavaScript concepts & traps, both for novices & professionals
+- [JS comparison table](https://dorey.github.io/JavaScript-Equality-Table/) - Explanatory table why you simply don't want to use `==`
 - [Essential JavaScript links](https://github.com/ericelliott/essential-javascript-links) - Exhaustive list of learning resources
 - [React awesome](https://github.com/enaqx/awesome-react) - A collection of various things regarding just React ecosystem.
 - [Superheroes.js](http://superherojs.com/) - Yet another comprehensive list of resources.
