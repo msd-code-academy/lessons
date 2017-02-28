@@ -55,7 +55,7 @@ and *fork* the repository
     - Go back to your Github repository
     - Click on "New pull request"
     - Select your branch in second dropdown you want to merge
-    - You can use "Reviewers" in righ panel to assign someone, e.g. some lectors, to review your changes
+    - You can use "Reviewers" in right panel to assign someone, e.g. some lectors, to review your changes
 
 *Tip*: Use ssh keys instead of username/password:
 

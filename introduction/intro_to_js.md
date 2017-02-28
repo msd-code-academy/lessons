@@ -57,13 +57,13 @@ if (!someVariable) { // outputs "Yes" if someVariable is "", 0, NaN, null, undef
 
 TODO?
 
-### Variables defined with let & const
+#### Variables defined with let & const
 
 Normally, You already know, `var` defines variables in the scope of whole function.
 This doesn't apply to let & const, which are defined for blocks:
 
 ```
-var getName = (isSystem) {
+var getName = function (isSystem) {
   const name = "Neo";
   var agent = null;
   
