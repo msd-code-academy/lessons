@@ -71,8 +71,7 @@ Try to play with it as you wish!
 - Look into source code and break something, see what happened?
 - Create new file `src/HelloButton.js` with the following content 
 and find out how to add this into page:
- 
-```jsx harmony
+```jsx
 import React, {Component} from 'react';
 
 class HelloButton extends Component {

@@ -27,34 +27,35 @@ Download Git from the official page: [https://git-scm.com/download/win](https://
 and *fork* the repository
 
 2. **Clone your newly created repository:**
-```bash
-git clone <url-of-your-repo>
-```
 
-Copypasting url from browser is enough.
+    ```bash
+    git clone <url-of-your-repo>
+    ```
+
+    Copypasting url from browser is enough.
 
 3. **Create new branch**
 
-Don't push changes directly to the master, instead use branches so we can do Code Review with pull requests
+    Don't push changes directly to the master, instead use branches so we can do Code Review with pull requests
 
-```bash
-git checkout -b <some-name-for-your-branch>
-```
+    ```bash
+    git checkout -b <some-name-for-your-branch>
+    ```
 
 4. **Commit & push your changes**
 
-```bash
-git add *
-git commit -m 'New cool stuff added'
-git push
-```
+    ```bash
+    git add *
+    git commit -m 'New cool stuff added'
+    git push
+    ```
 
 5. **Create pull request**
 
-- Go back to your Github repository
-- Click on "New pull request"
-- Select your branch in second dropdown you want to merge
-- You can use "Reviewers" in righ panel to assign someone, e.g. some lectors, to review your changes
+    - Go back to your Github repository
+    - Click on "New pull request"
+    - Select your branch in second dropdown you want to merge
+    - You can use "Reviewers" in righ panel to assign someone, e.g. some lectors, to review your changes
 
 *Tip*: Use ssh keys instead of username/password:
 
