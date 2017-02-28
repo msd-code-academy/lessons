@@ -78,7 +78,7 @@ var getName = (isSystem) {
 };
 ```
 
-### *this*
+### *this* identifier
 
 TODO
 
@@ -87,7 +87,16 @@ TODO
 
 ## Javascript crash course
 
-TODO quick test - fix bugs in code & run tests
+Let's practice a little bit a knowledge from this section, fork the repository:
+[github.com/msd-code-academy/intro-javascript-crash-course](https://github.com/msd-code-academy/intro-javascript-crash-course)
+clone it, go the the project folder and run commands:
+
+```bash
+npm install # installs all the required dependencies (see package.json)
+npm test # run tests
+```
+
+As you can see, tests failed. Can you fix the code so they pass?
 
 ## Useful resources
 
