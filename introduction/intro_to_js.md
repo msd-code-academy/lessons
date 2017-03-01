@@ -68,7 +68,7 @@ var getName = function (isSystem) {
   var agent = null;
   
   if (isSystem) {
-    const name = "Anderson"; // here you just defined new variable available inly in `if` 
+    const name = "Anderson"; // here you just defined new variable available only in `if` 
     var agent = "Smith"; // but there you just redefined the already existing variable
   }
   
