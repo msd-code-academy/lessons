@@ -16,7 +16,6 @@ and even propose improvements to the course itself.
  - [Git basics](introduction/git_basics.md)
  - [Environment setup](introduction/environment.md)
  - [Intro to JavaScript world](introduction/intro_to_js.md)
- - React.js crash course
  
 ### React.js basics
  - JSX & rendering
