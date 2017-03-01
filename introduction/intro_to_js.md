@@ -2,7 +2,18 @@
 
 ## Brief history & language development
 
-TODO
+- Language itself developed in 10 days at Netscape by Brendan Eich
+- Working draft originally called Mocha, then renamed to LiveScript in beta, then released as JavaScript
+- It's said that name "JavaScript" was selected mainly because of marketing purpose (because Java was cool back then)
+- Standardisation done by "EcmaScript" standards
+    - early versions: 1, 2, 3
+    - version no. 4 abandoned
+    - version no. 5 and 5.1 from 2009-2011
+    - version no. 6, later renamed to 2015
+    - from now on, one version release per year - 2016, 2017, ... 
+    - see the proposals and their statuses on Github: [github.com/tc39/proposals](https://github.com/tc39/proposals) 
+- Node.js - JavaScript interpreter for server, basically V8 engine from Chromium enhanced by filesystem & network utilities
+- Npm - package manager for maintaining dependencies & stuff...
 
 ## JavaScript basics
 
@@ -55,7 +66,9 @@ if (!someVariable) { // outputs "Yes" if someVariable is "", 0, NaN, null, undef
 
 ![Function scope](/assets/img/function_scope.png)
 
-TODO?
+- each function defines new scope 
+- code in inner (child) scope can access variables defined in outer (parent) scope
+- variables defined in current scope take precedence over variables in parent scope
 
 #### Variables defined with let & const
 
@@ -80,7 +93,22 @@ var getName = function (isSystem) {
 
 ### *this* identifier
 
-TODO
+- Refers to the “context” in which the function is called
+- It’s not the reference to scope
+
+```
+const hasClass = function (className) {
+  return this.classList.contains(className);
+};
+const e = document.querySelector('#element');
+
+hasClass('.btn'); // Cannot read property 'contains' of undefined
+hasClass.call(e, '.btn'); // true/false depending on element
+hasClass.call({}, '.btn'); // Cannot read property 'contains' of undefined
+
+const imprisoned = hasClass.bind(e); // returns new function with "fixed" context
+imprisoned('.btn'); // true/false depending on element
+```
 
 **More on JavaScript basics:**
 [You Don't Know JS: Up & Going - Chapter 2: Into JavaScript](https://github.com/getify/You-Dont-Know-JS/blob/master/up%20%26%20going/ch2.md)
