@@ -18,7 +18,7 @@ and even propose improvements to the course itself.
  - [Intro to JavaScript world](introduction/intro_to_js.md)
  
 ### React.js basics
- - JSX & rendering
+ - [JSX & rendering](react_basics/jsx_rendering.md)
  - Handling events
  - Component lifecycle
  

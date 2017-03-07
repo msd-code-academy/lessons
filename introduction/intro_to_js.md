@@ -128,7 +128,8 @@ As you can see, tests failed. Can you fix the code so they pass?
 
 ## Useful resources
 
-- [MDN](https://developer.mozilla.org/cs/docs/Web/JavaScript/) - Unofficial JavaScript wiki 
+- [MDN](https://developer.mozilla.org/cs/docs/Web/JavaScript/) - Unofficial JavaScript wiki
+- [MDN - A re-introduction to JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript/A_re-introduction_to_JavaScript) - MDN page dedicated specially to JS basics
 - [You don't know JS](https://github.com/getify/You-Dont-Know-JS) - Superb well of all JavaScript concepts & traps, both for novices & professionals
 - [JS comparison table](https://dorey.github.io/JavaScript-Equality-Table/) - Explanatory table why you simply don't want to use `==`
 - [Essential JavaScript links](https://github.com/ericelliott/essential-javascript-links) - Exhaustive list of learning resources
