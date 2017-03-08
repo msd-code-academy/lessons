@@ -188,6 +188,8 @@ const people = [
 people.map(person => <PersonItem key={person.id} person={person} />);
 ```
 
+See working example on [Codepen](http://codepen.io/jaroslav-kubicek/pen/MpJwXK)
+
 *Are you asking why?*
 
 - React.js use it for faster & more effective DOM updates
