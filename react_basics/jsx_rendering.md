@@ -201,3 +201,4 @@ Further reading in [DOCs](https://facebook.github.io/react/docs/lists-and-keys.h
 
 - [React.js - introducing JSX](https://facebook.github.io/react/docs/introducing-jsx.html)
 - [React.js - rendering elements](https://facebook.github.io/react/docs/rendering-elements.html)
+- [React: Rethinking Best Practices](https://www.slideshare.net/floydophone/react-preso-v2/) - perfect presentation by Pete Hunt
