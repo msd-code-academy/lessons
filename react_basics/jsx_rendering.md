@@ -152,7 +152,7 @@ See working example on [Codepen](http://codepen.io/jaroslav-kubicek/pen/RpoXJV?e
   }
   */
   
-  this.setState({count: "Jane"});
+  this.setState({value: "Jane"});
   
   /*
   next state:
