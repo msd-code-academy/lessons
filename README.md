@@ -17,7 +17,7 @@ and even propose improvements to the course itself.
  - [Environment setup](introduction/environment.md)
  - [Intro to JavaScript world](introduction/intro_to_js.md)
  
-### React.js basics
+### [React.js basics](react_basics/README.md)
  - [JSX & rendering](react_basics/jsx_rendering.md)
  - Handling events
  - Component lifecycle
