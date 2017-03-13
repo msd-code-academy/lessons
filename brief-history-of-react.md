@@ -88,3 +88,4 @@ From developer point of view, this is a win: it looks like we render everything 
 - https://code-cartoons.com/a-cartoon-intro-to-redux-3afb775501a6
 - https://facebook.github.io/react/blog/2013/06/05/why-react.html
 - http://stackoverflow.com/a/23995928/738944
+- https://youtu.be/DgVS-zXgMTk (slides: https://www.slideshare.net/floydophone/react-preso-v2)
