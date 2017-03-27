@@ -19,7 +19,7 @@ and even propose improvements to the course itself.
  
 ### [React.js basics](react_basics/README.md)
  - [JSX & rendering](react_basics/jsx_rendering.md)
- - Handling events
+ - [Handling events](react_basics/events.md)
  - Component lifecycle
  
 ### Unit testing 
