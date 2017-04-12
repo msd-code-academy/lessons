@@ -3,7 +3,7 @@
 ## Agenda
 
 1. Problem introduction
-   - Components are [too long](https://github.com/msd-code-academy/06-cinema-portal-redux/blob/master/src/PurchasePage.js)
+   - Components are [too long](https://github.com/msd-code-academy/06-cinema-portal-redux/blob/master/src/containers/App.js)
    - We need pass props (data or event handlers) up and down
    - We don't have enough abstractions for app to grow
 
