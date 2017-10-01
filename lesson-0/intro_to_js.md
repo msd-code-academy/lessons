@@ -1,0 +1,154 @@
+# Intro to JavaScript world
+
+## Brief history & language development
+
+- developed in 10 days at Netscape by Brendan Eich
+- inspired by *Java* syntax, *Scheme* functional programming and *Self* object oriented programming with prototypical inheritance
+- standardized by ECMA => a.k.a. "ECMAScript"
+    - ES3, ES5 Strict, ES6 == ES2015, ES6+
+    - status of new proposals on GitHub, stage-0 to state-4 [github.com/tc39/proposals](https://github.com/tc39/proposals)
+    - babel [compiler](http://babeljs.io/) vs [polyfills](https://babeljs.io/docs/usage/polyfill/)
+- Node.js - JavaScript interpreter for server, V8 engine from Chromium enhanced by file system & network utilities
+- npm - package manager for maintaining dependencies & stuff...
+
+## JavaScript (JS) basics
+
+### Statements and Expressions
+
+- a statement will DO something - `if`, `for`, `var`, `function`, `{}` (block), ...
+- an expression will be evaluated to a value (i.e. an object) - `1 + 1`, `function`, ...
+- expressions consist of:
+  - operators: `=` (assignment), `+` (arithmetic vs string), `.` (property accessor), `()` (function invocation), `.. ? .. : ..` (ternary), `!` (logical), `|` (bitwise - slow)
+  - objects: `1`, `'abc'`, `[]`, `{}`
+  - and identifiers that *refer* to an object: `var a`, `function a(){}`, `a.b` ...
+
+### Types
+
+JS is dynamically typed language - it DOES have types, you just don't define types explicitly:
+
+```
+var something = 123;
+```
+
+JS is also loosely (weakly) typed language - which means it can perform type coercion implicitly:
+
+```js
+var actualNumber = Math.sqrt(2);
+var looksLikeNumber = "123";
+console.log(actualNumber * looksLikeNumber); // Outputs 173.9482681718907
+
+var doesntlookLikeNumber = "abc123";
+var result = doesntlookLikeNumber * 2;
+console.log(result); // Outputs NaN (Not a number)
+console.log(typeof result); // Outputs "number"
+
+console.log('$' + 1 + 1);
+```
+
+- see [Data_structures](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures) on MDN
+- `null`, `undefined`, undeclared
+- typeof, Array.isArray
+- TypeError, `var a = {}; a.b.c` in Firefox vs Chrome/Node
+
+### Truthy/Falsy
+
+```js
+if (!someVariable) {
+  // if someVariable is "", 0, NaN, null, undefined or false
+  console.log("someVariable is falsy");
+}
+```
+- [equality table](https://dorey.github.io/JavaScript-Equality-Table/)
+- `==` vs `===`
+- `x && guard`, `x || default`, `!!x`
+
+### Scopes
+
+![Function scope](/assets/img/function_scope.png)
+
+- each function defines new scope - lexical / static scope
+- closure - code in child scope can access variables defined in parent scope (even after the outer function already returned)
+- shadowing - variables defined in current scope take precedence over variables in parent scope
+- hoisting - 2-pass compilation, moves `var` and `function` statements to be declared top of parent function
+- passed by reference
+- IIFE - immediately-invoked function expression
+- don't create functions inside a loop
+
+#### let & const
+
+Normally, You already know, `var` defines variables in the scope of whole function.
+This doesn't apply to let & const, which are defined for blocks:
+
+```js
+var getName = function (isSystem) {
+  const name = "Neo";
+  var agent = null;
+
+  if (isSystem) {
+    const name = "Anderson"; // here you just defined new variable available only in `if`
+    var agent = "Smith"; // but there you just redefined the already existing variable
+  }
+
+  // variable name refers to "Neo" again
+  // variable agent is redefined to "Smith" if isSystem is truthy
+  ...
+};
+```
+
+#### *this* identifier
+
+- refers to a “context” object in which the function was called
+- dynamically scoped
+
+```js
+const hasClass = function (className) {
+  return this.classList.contains(className);
+};
+const e = document.querySelector('#element');
+
+hasClass('.btn'); // Cannot read property 'contains' of undefined
+hasClass.call(e, '.btn'); // true/false depending on element
+hasClass.call({}, '.btn'); // Cannot read property 'contains' of undefined
+
+const imprisoned = hasClass.bind(e); // returns new function with "fixed" context
+imprisoned('.btn'); // true/false depending on element
+```
+
+- `new` keyword, constructor functions, `Object.creat`e, object literals `{}`
+- `bind` method
+- `var that = this`
+
+### Q&A
+
+Bonus topics:
+- if .. else, switch .. case
+- for .. in, for .. of, forEach
+- map `[1,2] => [2,4]`
+- filter `[1,2] => [2]`
+- reduce `[1,2] => 3`, `{a: 1, b: 2} => {a: 2, b: 4}`
+- event loop
+- Web APIs
+- Promise
+- ES6 arrow functions, class, ...
+- HTML, CSS, DOM
+- JSON
+- Object.prototype.myCoolMethod good or evil?
+- RegExp `/abc(\d+)/`
+- camelCase123, Constructor, IMMUTABLE_CONSTANT, stream$, \_privateButNotReally
+- curry `(a) => (b) => a + b`
+- semicolon insertion;
+- // comments
+- eslint
+- why not use `with` and `eval`
+- ...
+
+## More resources
+
+- [MDN](https://developer.mozilla.org/cs/docs/Web/JS/) - Unofficial JS wiki
+- [MDN - A re-introduction to JS](https://developer.mozilla.org/en-US/docs/Web/JS/A_re-introduction_to_JS) - MDN page dedicated specially to JS basics
+- [You don't know JS](https://github.com/getify/You-Dont-Know-JS) - Superb well of all JS concepts & traps, both for novices & professionals
+ - [You Don't Know JS: Up & Going - Chapter 2: Into JS](https://github.com/getify/You-Dont-Know-JS/blob/master/up%20%26%20going/ch2.md)
+- [Essential JS links](https://github.com/ericelliott/essential-JS-links) - Exhaustive list of learning resources
+- [React awesome](https://github.com/enaqx/awesome-react) - A collection of various things regarding just React ecosystem.
+- [Superheroes.js](http://superherojs.com/) - Yet another comprehensive list of resources.
+- [Crockford on JavaScript](https://www.youtube.com/watch?v=RO1Wnu-xKoY) - youtube video
