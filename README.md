@@ -1,44 +1,20 @@
 ![Code Academy](/assets/img/js-logo-msd-big.png)
 
-Learning materials for Javascript Code Academy
+Materials for Javascript Code Academy, updated for second run starting October 2017.
 
 ## Community
 
-Join us on [Discourse forum](http://discourse.js-code-academy.eu/),
-where you can ask any questions, share knowledge with others
-and even propose improvements to the course itself.
+TODO: FB or Slack link.
 
 ## Content
 
-### [Introduction](introduction/README.md)
-
- - [Motivation to course](introduction/motivation.md)
- - [Git basics](introduction/git_basics.md)
- - [Environment setup](introduction/environment.md)
- - [Intro to JavaScript world](introduction/intro_to_js.md)
-
-### [React.js basics](react_basics/README.md)
- - [JSX & rendering](react_basics/jsx_rendering.md)
- - Handling events
- - Component lifecycle
-
-### Unit testing
-
-### Dealing with async
-- fetching data
-- callbacks, promises and beyond
-- various approaches to async operations in React.js applications
-
-### [Managing application state - Redux](redux/README.md)
- - about redux & how it solves app state for us
- - building effective state architecture
- 
-### Performance & debugging
-
-### Backend in node.js with express
-
-### Deploy
-
-## About
-
-- See [Eventbrite](https://www.eventbrite.com/e/javascript-code-academy-by-msd-at-prague-tickets-31930493967) event page
+* 0 (2017-10-05) [Lesson Zero](lesson-0)
+* 1 (2017-10-12) [jQuery vs React](lesson-1)
+* 2 (2017-10-19) [React Fundamentals](lesson-2)
+* 3 (2017-10-26) [React Testing](lesson-3)
+* 4 (2017-11-02) [React Async](lesson-4)
+* 5 (2017-11-09) [Webpack](lesson-5)
+* 6 (2017-11-16) [Node.js](lesson-6)
+* 7 (2017-11-23) [Redux I](lesson-7)
+* 8 (2017-11-30) [Redus II](lesson-8)
+* 9 (2017-12-07) [Hackathon](lesson-9) + Beer
