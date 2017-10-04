@@ -50,6 +50,29 @@ console.log('$' + 1 + 1);
 - typeof, Array.isArray
 - TypeError, `var a = {}; a.b.c` in Firefox vs Chrome/Node
 
+### Lets try to explain this quiz question #1 from registration form - what the output will be?
+
+```js
+const obj = {
+  name: 'John',
+  getName () {
+    return this.name;
+  }
+};
+
+const name1 = obj.getName();
+const getName = obj.getName;
+const name2 = getName();
+console.log(`${name1} ${name2}`);
+
+//A: "John John"
+//B: "null John"
+//C: "John undefined" - is correct answer
+//D: It will throw an error
+//E: Have no idea
+```
+
+
 ### Truthy/Falsy
 
 ```js
@@ -95,6 +118,21 @@ var getName = function (isSystem) {
 };
 ```
 
+### Lets try to explain this quiz question #2 from registration form
+How would you change the second line in the following example so that it prints numbers 0, 1, 2, 3 in this order?
+
+```js
+for (var i = 0; i < 4; i++) {
+  setTimeout(() => console.log(i), 0)
+}
+
+//A: By changing line 2) ... (function(number) { setTimeout(() => console.log(number), 0)})(i) is correct answer
+//B: By changing line 1) ... for (let i = 0; i < 4; i++) {   is correct answer
+//C: By changing line 2) ... var temp = i; setTimeout(() => console.log(temp), 0)
+//D: By changing line 2) ... setTimeout((i) => console.log(i), 0)
+//E: Have no idea
+```
+
 #### *this* identifier
 
 - refers to a “context” object in which the function was called
@@ -117,6 +155,29 @@ imprisoned('.btn'); // true/false depending on element
 - `new` keyword, constructor functions, `Object.creat`e, object literals `{}`
 - `bind` method
 - `var that = this`
+
+### Lets try to explain this quiz question #3 from registration form
+
+Finish line `var sayHello = ` so the whole code example prints "Hello John" to the console
+
+```js
+var hello = {
+  name: 'John',
+  sayHello: function() {
+    return 'Hello ' + this.name
+  }
+}
+
+var sayHello = ...
+
+console.log(sayHello())
+
+//A: var sayHello = hello.sayHello
+//B: var sayHello = hello.sayHello()
+//C: var sayHello = hello.sayHello.call(hello)
+//D: var sayHello = hello.sayHello.bind(hello) is correct answer
+//E: Have no idea
+```
 
 ### Q&A
 
