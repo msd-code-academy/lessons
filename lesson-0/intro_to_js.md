@@ -1,5 +1,8 @@
 # Intro to JavaScript world
 
+Please ask questions if some topic is not clear and/or if I speak to slow or quiet.
+Purpose of this introduction is to give you vocabulary to ask better questions,  
+
 ## Brief history & language development
 
 - developed in 10 days at Netscape by Brendan Eich
@@ -49,6 +52,7 @@ console.log('$' + 1 + 1);
 - `null`, `undefined`, undeclared
 - typeof, Array.isArray
 - TypeError, `var a = {}; a.b.c` in Firefox vs Chrome/Node
+- TypeScript, Flow, PropTypes, ...
 
 ### Lets try to explain this quiz question #1 from registration form - what the output will be?
 
@@ -92,7 +96,7 @@ if (!someVariable) {
 - each function defines new scope - lexical / static scope
 - closure - code in child scope can access variables defined in parent scope (even after the outer function already returned)
 - shadowing - variables defined in current scope take precedence over variables in parent scope
-- hoisting - 2-pass compilation, moves `var` and `function` statements to be declared top of parent function
+- hoisting - moves `var` and `function` statements to be declared top of parent function
 - passed by reference
 - IIFE - immediately-invoked function expression
 - don't create functions inside a loop
@@ -155,6 +159,7 @@ imprisoned('.btn'); // true/false depending on element
 - `new` keyword, constructor functions, `Object.creat`e, object literals `{}`
 - `bind` method
 - `var that = this`
+- `class ... extends ...` is syntax sugar for prototypical inheritance
 
 ### Lets try to explain this quiz question #3 from registration form
 
@@ -181,27 +186,7 @@ console.log(sayHello())
 
 ### Q&A
 
-Bonus topics:
-- if .. else, switch .. case
-- for .. in, for .. of, forEach
-- map `[1,2] => [2,4]`
-- filter `[1,2] => [2]`
-- reduce `[1,2] => 3`, `{a: 1, b: 2} => {a: 2, b: 4}`
-- event loop
-- Web APIs
-- Promise
-- ES6 arrow functions, class, ...
-- HTML, CSS, DOM
-- JSON
-- Object.prototype.myCoolMethod good or evil?
-- RegExp `/abc(\d+)/`
-- camelCase123, Constructor, IMMUTABLE_CONSTANT, stream$, \_privateButNotReally
-- curry `(a) => (b) => a + b`
-- semicolon insertion;
-- // comments
-- eslint
-- why not use `with` and `eval`
-- ...
+* Check also [JavaScript Homework](js_homework.md)
 
 ## More resources
 
