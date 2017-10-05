@@ -10,9 +10,6 @@ For any questions related to the Academy or its content we created **Slack room*
 Join it and ask us about JavaScript, React, Redux, Webpack, API and lot more. Are you struggling with homeworks for next lesson or any other issues? Don't worry and let us help you.
 [Link to join JS CODE ACADEMY Slack](https://join.slack.com/t/msdcodeacademy/shared_invite/enQtMjUxMjYyMjQyODY5LWI1MTU2ZWY0M2Q2ZWVmYTQ1MWJkYWMwMzlkNDFjOTE0YTk3NDY4NDFjMzhkMDdkNzMwOGUzZjk2YjIxMzViNGU)
 
-![Work hard](https://media.giphy.com/media/hOzfvZynn9AK4/giphy-facebook_s.jpg)
-
-
 ## Content
 
 * 0 (2017-10-05) [Lesson Zero](lesson-0)
