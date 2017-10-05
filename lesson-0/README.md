@@ -1,5 +1,6 @@
 # Lesson Zero
 
+ - [Who we are](hwo-we-are.md)
  - [Motivation to course](motivation.md)
  - [Slides from 1st run](https://www.slideshare.net/JaroslavKubek/javascript-code-academy-introduction)
  - **[Introduction to JavaScript world](intro_to_js.md)**
