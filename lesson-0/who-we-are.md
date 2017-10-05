@@ -2,7 +2,7 @@
 
 ## Organisers
 
-- Veronika Gabrielova - Chief Admin, Coffee Maker
+- Veronika Gabrielova @lspdv - Chief Admin, Coffee Maker
 
 ![](../assets/img/veronika.png)
 
@@ -17,12 +17,12 @@
 ## Lectors
 
 - Peter Hozak
-- Viliam Elischer
-- Jaroslav Minarik
-- Jaroslav Kubicek
-- Pavel Vanecek
-- Ales Vondra
+- Viliam Elischer @vireliam
+- Jaroslav Minarik 
+- Jaroslav Kubicek @KubajzHK
+- Pavel Vanecek @Corkscreewe
+- Ales Vondra @alesak23
 - Adam Blazek
 - Stefan Vonolfen
-- Pavel Gavlik
-- Petr Messner
+- Pavel Gavlik @PavelGavlik
+- Petr Messner @messa_cz
