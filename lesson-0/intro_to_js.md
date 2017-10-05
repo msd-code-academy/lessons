@@ -1,7 +1,8 @@
 # Intro to JavaScript world
 
-Please ask questions if some topic is not clear and/or if I speak to slow or quiet.
-Purpose of this introduction is to give you vocabulary to ask better questions,  
+Please ask questions if some topic is not clear and/or if I speak too slow or quiet.
+Purpose of this introduction is to give you vocabulary to ask better questions,
+not to explain everything in the language in 2 hours :)
 
 ## Brief history & language development
 
