@@ -1,4 +1,4 @@
-# A Brief History of React
+# A Brief History of React
 
 Why did Facebook create React? What problems does it solve? What was there before? Let's see a little bit of history.
 
