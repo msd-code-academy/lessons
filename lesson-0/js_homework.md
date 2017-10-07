@@ -8,7 +8,7 @@ Basic topics:
 - if .. else, switch .. case
 - for .. in, for .. of, forEach
 - array map `[1,2] => [2,4]`, filter `[1,2] => [2]`
-- reduce array to number `[1,2] => 3`, reduce to objecy `{a: 1, b: 2} => {a: 2, b: 4}`
+- reduce array to number `[1,2] => 3`, reduce an object `{a: 1, b: 2} => {a: 2, b: 4}`
 - Promise
 - ES6 arrow functions, ...
 - HTML, CSS, DOM
