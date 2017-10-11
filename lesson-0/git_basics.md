@@ -67,6 +67,7 @@ and *fork* the repository
 
 - [git - the simple guide](http://rogerdudler.github.io/git-guide/) - Great introductory guide if you don't know much about git.
 - [Try Git](https://try.github.io) - Learn by doing, for beginners to git
+- [Learn Git Branching](https://learngitbranching.js.org/) - the most visual and interactive way to learn Git on the web
 - [Github Hello World](https://guides.github.com/activities/hello-world/) - Introductory guide to Github
 - [Git DOCs](https://git-scm.com/doc) - official docs
 - [Gitflow](http://nvie.com/posts/a-successful-git-branching-model/) - original article about common flow
