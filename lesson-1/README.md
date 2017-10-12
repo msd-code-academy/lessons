@@ -17,7 +17,7 @@ _Exercise #1:_
 
 ## MV* frameworks
 
-Comparison of simple-but-practical implemantation of the same TODO app in various MV* frameworks, libraries
+Comparison of simple-but-practical implementation of the same TODO app in various MV* frameworks, libraries
 and vanilla JS: http://todomvc.com/
 
 ### React
