@@ -22,15 +22,13 @@
   <div class="output output2">Lorem ipsum, ...</div>
 
   <script>
-    var setColor = (function() {
-      var outputs = document.getElementsByClassName('output')
+    var outputs = document.getElementsByClassName('output')
 
-      return function(color) {
-        Array.from(outputs).forEach(function(element) {
-          element.style.backgroundColor = color
-        })
-      }
-    })()
+    function setColor(color) {
+      Array.from(outputs).forEach(function(element) {
+        element.style.backgroundColor = color
+      })
+    }
 
     document.getElementById('red').addEventListener('click', function() {
       setColor('red')

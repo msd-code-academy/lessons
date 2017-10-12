@@ -9,6 +9,7 @@ Comparison of 2 approaches to web-app development (over-simplified):
 * [Ajax frameworks](https://en.wikipedia.org/wiki/List_of_Ajax_frameworks#JavaScript) 
 * compare to native Web API: http://youmightnotneedjquery.com/
 * http://caniuse.com/ provides a way to check feature support as well as a list of "modern" browsers
+   * see also https://developer.mozilla.org/en-US/
 
 _Exercise #1:_
 * download and open [jquery/v1.html](jquery/v1.html)
@@ -16,6 +17,8 @@ _Exercise #1:_
 
 
 ## MV* frameworks
+
+For larger, more complicated dynamic applications, vanilla ES6 might be not enough.
 
 Comparison of simple-but-practical implementation of the same TODO app in various MV* frameworks, libraries
 and vanilla JS: http://todomvc.com/
@@ -34,7 +37,7 @@ _Exercise #2:_
     * html title, main header, static button, static text
 * use life-cycle methods to add dynamic features
 
-_Excercise #3 (bonus):_
+_Exercise #3 (bonus):_
 * add 3rd button to any of the solutions
 * change color of the text after pressing 'Blue' button to be more readable
 * add rounded corners for `.output1` element after pressing 'Red' button (border-radius CSS property)
@@ -44,7 +47,6 @@ _Excercise #3 (bonus):_
 MV* frameworks and React-family in particular focus on maintainability:
 * easy to read and understand
 * easy to debug, e.g. inspect element in browser and find corresponding code
-* easy to achieve single responsibility
 
 ## Homework
 
