@@ -1,0 +1,22 @@
+.App-output {
+  background-color: yellow;
+  margin: 10px;
+}
+
+.App-output1 {
+  width: 50px;
+  height: 50px;
+  text-align: center;
+}
+
+.App-output2 {
+  padding: 10px
+}
+
+.App-red {
+  background-color: red;
+}
+
+.App-blue {
+  background-color: blue;
+}

@@ -1,0 +1,44 @@
+<!-- when updating current.html (for git diffs), copy to v2, v3, ... so people can find it without git archeology -->
+<html>
+<head>
+  <title>Selectors</title>
+  <style>
+    .output {
+      background-color: yellow;
+      margin: 10px;
+    }
+    .output1 {
+      width: 50px;
+      height: 50px;
+      text-align: center;
+    }
+    .output2 { padding: 10px; }
+  </style>
+</head>
+<body>
+  <button id="red">Red</button>
+  <button id="blue">Blue</button>
+  <div class="output output1"></div>
+  <div class="output output2">Lorem ipsum, ...</div>
+
+  <script>
+    var setColor = (function() {
+      var outputs = document.getElementsByClassName('output')
+
+      return function(color) {
+        Array.from(outputs).forEach(function(element) {
+          element.style.backgroundColor = color
+        })
+      }
+    })()
+
+    document.getElementById('red').addEventListener('click', function() {
+      setColor('red')
+    })
+
+    document.getElementById('blue').addEventListener('click', function() {
+      setColor('blue')
+    })
+  </script>
+</body>
+</html>
