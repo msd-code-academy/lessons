@@ -12,3 +12,11 @@
 .App-output2 {
   padding: 10px
 }
+
+.App-red {
+  background-color: red;
+}
+
+.App-blue {
+  background-color: blue;
+}
