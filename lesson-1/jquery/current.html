@@ -16,29 +16,27 @@
   </style>
 </head>
 <body>
-  <button id="red">Red</button>
-  <button id="blue">Blue</button>
-  <div class="output output1"></div>
-  <div class="output output2">Lorem ipsum, ...</div>
+<button id="red">Red</button>
+<button id="blue">Blue</button>
+<div class="output output1"></div>
+<div class="output output2">Lorem ipsum, ...</div>
 
-  <script>
-    var setColor = (function() {
-      var outputs = document.getElementsByClassName('output')
+<script>
+  var outputs = document.getElementsByClassName('output')
 
-      return function(color) {
-        Array.from(outputs).forEach(function(element) {
-          element.style.backgroundColor = color
-        })
-      }
-    })()
-
-    document.getElementById('red').addEventListener('click', function() {
-      setColor('red')
+  function setColor(color) {
+    Array.from(outputs).forEach(function(element) {
+      element.style.backgroundColor = color
     })
+  }
 
-    document.getElementById('blue').addEventListener('click', function() {
-      setColor('blue')
-    })
-  </script>
+  document.getElementById('red').addEventListener('click', function() {
+    setColor('red')
+  })
+
+  document.getElementById('blue').addEventListener('click', function() {
+    setColor('blue')
+  })
+</script>
 </body>
 </html>
