@@ -32,9 +32,21 @@ _Exercise #2:_
 * `npm start`
 * update the component to render static content similar to original jquery app
     * html title, main header, static button, static text
-* use life-cycle methods to add dynamic features 
+* use life-cycle methods to add dynamic features
 
+_Excercise #3 (bonus):_
+* add 3rd button to any of the solutions
+* change color of the text after pressing 'Blue' button to be more readable
+* add rounded corners for `.output1` element after pressing 'Red' button (border-radius CSS property)
+
+## Conclusion
+
+MV* frameworks and React-family in particular focus on maintainability:
+* easy to read and understand
+* easy to debug, e.g. inspect element in browser and find corresponding code
+* easy to achieve single responsibility
 
 ## Homework
 
+* bonus exercise (if we didn't have enough time)
 * http://todomvc.com/ - review a few examples, e.g. for React
