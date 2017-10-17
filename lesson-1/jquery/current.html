@@ -25,7 +25,7 @@
   var outputs = document.getElementsByClassName('output')
 
   function setColor(color) {
-    Array.from(outputs).forEach(function(element) {
+    Array.prototype.slice.call(outputs).forEach(function(element) {
       element.style.backgroundColor = color
     })
   }
