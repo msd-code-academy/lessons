@@ -4,7 +4,7 @@ import '../styles/NoteList.css'
 class NoteList extends React.Component {
 	render() {
 		return (
-			'Note 1'
+			'NoteList'
 		)
 	}
 }

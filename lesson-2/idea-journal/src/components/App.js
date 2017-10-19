@@ -1,6 +1,5 @@
 import React from 'react'
 import Header from './Header'
-import NoteList from './NoteList'
 import '../styles/App.css';
 
 class App extends React.Component {
@@ -16,13 +15,10 @@ class App extends React.Component {
   }
 
   addNoteToList = (note) => {
-    // const {notes} = this.state
-    // const newNote = {...note}
     // add new note, use Array.prototype.concat()
   }
   
   removeNoteFromList = (noteId) => () => {
-    // const {notes} = this.state
     // filter out note based on noteId, use Array.prototype.filter()
   }
 
@@ -32,7 +28,6 @@ class App extends React.Component {
       <div className="App">
         <div>
           <Header />
-          <NoteList notes={notes} />
         </div>
       </div>
     )

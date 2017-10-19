@@ -19,16 +19,16 @@ class NewNoteModal extends React.Component {
 
 	handleFormSubmit = (e) => {
 		e.preventDefault()
-		// const {note} = this.state
+		// add not to the list of notes and close modal window
 	}
 
 	render() {
 		return (
 			<div className="NewNoteModal">
-				<a onClick={''}>ADD NOTE</a>
+				<a>ADD NOTE</a>
 				<Modal
-				  isOpen={''}
-					onRequestClose={''}
+				  /*isOpen={}*/
+					/*onRequestClose={}*/
 					className="NewNoteModal-modal-window"
 					overlayClassName="NewNoteModal-modal-overlay">
 					<h2>Add a new note</h2>

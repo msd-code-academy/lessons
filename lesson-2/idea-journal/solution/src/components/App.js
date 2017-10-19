@@ -18,9 +18,8 @@ class App extends React.Component {
 
   addNoteToList = (note) => {
     const {notes} = this.state
-    const newNote = {...note}
     this.setState({
-      notes: notes.concat(newNote)
+      notes: notes.concat(note)
     })
   }
   
