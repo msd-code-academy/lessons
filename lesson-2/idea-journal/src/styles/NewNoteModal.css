@@ -1,0 +1,78 @@
+.NewNoteModal {
+    display: flex;
+    align-items: center;
+    padding-right: 20px;
+}
+
+.NewNoteModal-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 20;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: reveal 200ms ease-out;
+}
+
+.NewNoteModal-modal-window {
+    width: 400px;
+    height: 300px;
+    max-height: 98vh;
+    border: 1px solid #ccc;
+    background: #fff;
+    overflow: auto;
+    border-radius: 4px;
+    outline: none;
+    padding: 20px 30px 30px 30px;
+}
+
+.NewNoteModal a {
+    cursor: pointer;
+    color: #880000;
+}
+
+.NewNoteModal a:hover {
+    color: #EE5757;
+}
+
+.NewNoteModal-modal-window div {
+    padding-bottom: 20px;
+}
+
+.NewNoteModal-modal-window label {
+   padding-right: 10px;
+}
+
+.NewNoteModal-modal-window input {
+    width: 80%;
+    font-size: 24px;
+}
+
+.NewNoteModal-modal-window textarea {
+    width: 80%;
+    font-size: 24px;
+    resize: none;
+}
+
+.NewNoteModal-modal-window button {
+    border: none;
+    border-radius: 0px;
+    color: #ffffff;
+    font-size: 20px;
+    background: #1a1a1a;
+    padding: 9px 20px 10px 20px;
+    text-decoration: none;
+}
+
+.NewNoteModal-textarea * {
+    vertical-align: top;
+}
+
+.NewNoteModal-modal-window input[type="text"],
+.NewNoteModal-modal-window textarea {
+    appearance: textfield;
+}
