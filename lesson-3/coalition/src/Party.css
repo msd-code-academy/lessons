@@ -1,0 +1,14 @@
+.Party {
+  border: 3px solid #ddd;
+  border-left-width: 15px;
+  border-right-width: 15px;
+  border-radius: 3px;
+  width: 20em;
+  margin: 5px;
+  flex: 0 1 auto;
+}
+
+.Party:hover {
+  cursor: pointer;
+  box-shadow: 0 0 10px 0 gray;
+}
