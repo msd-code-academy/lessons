@@ -7,10 +7,10 @@
 * [recap] Component's life cycle hooks recap
 * [recap] State & Props
 * [recap] Children + [key](https://stackoverflow.com/questions/28329382/understanding-unique-keys-for-array-children-in-react-js#28329550) (re-render)
+* [recap] PropTypes - Runtime TypeSafety
 * [recap] Promises + Async
 * [concept] HOC - Higher order components
 * [concept] FAC - Function as children / [Render callback](http://reactpatterns.com/#render-callback)
-* [new] PropTypes - Runtime TypeSafety
 * [new] Effects
 * [new] Local (Components) state vs. Centralized (Atom) state
 * [new] Error handling / Loading (the state machine)
@@ -41,6 +41,7 @@
 ## Learning resources
 
 * [React Forms](https://reactjs.org/docs/forms.html)
+* [You Might Need Redux](http://redux.js.org/)
 * [You Might Not Need Redux](https://medium.com/@dan_abramov/you-might-not-need-redux-be46360cf367)
 * [Michael Jackson - Never Write Another HoC](https://www.youtube.com/watch?v=BcVAq3YFiuc)
 * [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API)
