@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 import EditNoteModal from './EditNoteModal'
 import '../styles/Note.css'
@@ -22,7 +23,7 @@ class Note extends React.Component {
         <div className="Note-title">
           <h2>{title}</h2>
           <div>
-            {/* TODO: render here <EditNoteModal {...this.props}/> */}
+            <EditNoteModal {...this.props}/>
             <a onClick={removeNoteFromList(noteId)}>remove</a>
           </div>
         </div>
@@ -31,6 +32,14 @@ class Note extends React.Component {
       </div>
     )
   }
+}
+
+Note.propTypes = {
+  noteId: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  text: PropTypes.string.isRequired,
+  removeNoteFromList: PropTypes.func.isRequired,
+  editNote: PropTypes.func.isRequired
 }
 
 export default Note

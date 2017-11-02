@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 import NewNoteModal from './NewNoteModal'
 import logo from '../logo.png'
@@ -12,13 +13,16 @@ class Header extends React.Component {
         <div className="Header-logo">
           <img src={logo} alt="logo" />
           <b>IDEA JOURNAL</b>
-          {/* TODO: replace ??? with `noteCount` prop, make sure it's passed from App.js */}
-          <span>(containing ??? ideas)</span>
+          <span>(containing {this.props.noteCount} ideas)</span>
         </div>
         <NewNoteModal {...props} />
       </div>
     )
   }
+}
+
+Header.propTypes = {
+  noteCount: PropTypes.number.isRequired
 }
 
 export default Header

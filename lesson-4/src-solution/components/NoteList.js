@@ -4,7 +4,7 @@ import '../styles/NoteList.css'
 
 class NoteList extends React.Component {
   render() {
-    const { notes, removeNoteFromList } = this.props
+    const { notes, editNote, removeNoteFromList } = this.props
     return (
       <div className="NoteList">
         {notes.map(note => (
@@ -13,7 +13,7 @@ class NoteList extends React.Component {
             noteId={note.uuid}
             title={note.title}
             text={note.text}
-            /* TODO: pass editNote fn form App.js to Note.js */
+            editNote={editNote}
             removeNoteFromList={removeNoteFromList}
           />
         ))}

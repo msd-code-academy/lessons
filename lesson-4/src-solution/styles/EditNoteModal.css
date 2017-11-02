@@ -1,0 +1,78 @@
+.EditNoteModal {
+    display: flex;
+    align-items: center;
+    padding-right: 20px;
+}
+
+.EditNoteModal-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 20;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: reveal 200ms ease-out;
+}
+
+.EditNoteModal-modal-window {
+    width: 400px;
+    height: 300px;
+    max-height: 98vh;
+    border: 1px solid #ccc;
+    background: #fff;
+    overflow: auto;
+    border-radius: 4px;
+    outline: none;
+    padding: 20px 30px 30px 30px;
+}
+
+.EditNoteModal a {
+    cursor: pointer;
+    color: #880000;
+}
+
+.EditNoteModal a:hover {
+    color: #EE5757;
+}
+
+.EditNoteModal-modal-window div {
+    padding-bottom: 20px;
+}
+
+.EditNoteModal-modal-window label {
+   padding-right: 10px;
+}
+
+.EditNoteModal-modal-window input {
+    width: 80%;
+    font-size: 24px;
+}
+
+.EditNoteModal-modal-window textarea {
+    width: 80%;
+    font-size: 24px;
+    resize: none;
+}
+
+.EditNoteModal-modal-window button {
+    border: none;
+    border-radius: 0px;
+    color: #ffffff;
+    font-size: 20px;
+    background: #1a1a1a;
+    padding: 9px 20px 10px 20px;
+    text-decoration: none;
+}
+
+.EditNoteModal-textarea * {
+    vertical-align: top;
+}
+
+.EditNoteModal-modal-window input[type="text"],
+.EditNoteModal-modal-window textarea {
+    appearance: textfield;
+}
