@@ -1,0 +1,17 @@
+.Header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #ede0b0;
+    box-shadow: 0 0px 8px #000000;
+}
+
+.Header-logo img {
+    height: 80px;
+    vertical-align: middle;
+}
+
+
+.Header-logo span {
+  margin: 10px
+}
