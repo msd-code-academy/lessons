@@ -6,7 +6,7 @@
 
 * [recap] Component's life cycle hooks recap
 * [recap] State & Props
-* [recap] Children + key (re-render)
+* [recap] Children + [key](https://stackoverflow.com/questions/28329382/understanding-unique-keys-for-array-children-in-react-js#28329550) (re-render)
 * [recap] Promises + Async
 * [concept] HOC - Higher order components
 * [concept] FAC - Function as children / [Render callback](http://reactpatterns.com/#render-callback)
@@ -24,12 +24,12 @@
 ## Exercises
 
 1. display total number of notes in header // passing state down
-1. prevent saving an empty note (button must disabled)
-1. add propTypes for `Header.js` `Note.js` components
-1. replace the `default` with your github username to ./src/config/api.js`
+1. prevent saving an empty note (button must become disabled)
+1. add propTypes for `Header.js` and `Note.js` components
+1. replace the `default` with your github username in `./src/config/api.js`
 1. run `node upload-data.js`
 
-1. implement load notes from server 😈
+1. implement "load notes from server" (will be step-by-step walk through) 😈
 1. fetch notes in `componentDidMount` of App.js, transform and save notes to state
 1. in App.js display `<Spinner />` instead of `<NoteList />` during server call
 1. in App.js display 0 notes if there are no notes on server
