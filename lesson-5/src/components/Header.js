@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 //import NewNoteModal from './NewNoteModal'
 import logo from '../logo.png'
@@ -19,6 +20,8 @@ class Header extends React.Component {
           <img src={logo} alt="logo" />
           <b>IDEA JOURNAL</b>
           <span>{this.getNoteCountMessage(props.noteCount)}</span>
+          <span><Link to="/EditNotes" >Edit Notes</Link></span>
+          <span><Link to="/Summary" >Summary</Link></span>
         </div>
       </div>
     )

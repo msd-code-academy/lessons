@@ -1,6 +1,8 @@
 import React from 'react'
+import { Route } from 'react-router-dom'
 import Header from './Header'
 import EditNotesPage from './editNotesPage/EditNotesPage'
+import SummaryPage from './summaryPage/summaryPage'
 import Footer from './Footer'
 
 import '../styles/App.css'
@@ -13,7 +15,8 @@ class App extends React.Component {
     return (
       <div className="App">
         <Header />
-        <EditNotesPage />
+        <Route path="/EditNotes" component={EditNotesPage} />
+        <Route path="/Summary" component={SummaryPage}/>
         <Footer />
       </div>
     )
