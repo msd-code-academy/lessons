@@ -1,47 +1,41 @@
 # React router / redux
 
-## Goal - understand basics or react router and redux
+## Goal - understand basics of react router and redux
 
-## TODO
+## Workshop structure
 
-* [recap] Component's life cycle hooks recap
-* [recap] State & Props
-* [recap] Children + [key](https://stackoverflow.com/questions/28329382/understanding-unique-keys-for-array-children-in-react-js#28329550) (re-render)
-* [recap] PropTypes - Runtime TypeSafety
-* [recap] Promises + Async
-* [concept] HOC - Higher order components
-* [concept] FAC - Function as children / [Render callback](http://reactpatterns.com/#render-callback)
-* [new] Effects
-* [new] Local (Components) state vs. Centralized (Atom) state
-* [new] Error handling / Loading (the state machine)
+* [goal] add second page showing summary of all notes, that can be accessed from menu in header
+* [exercise - refactor] move logic from App.js to separate component - EditNotesPage.js
+    1. create component EditNotesPage and move logic from App.js to this new component (this breaks everything for now)
+    1. create folder editNotesPage and move all related components to it
+    1. fix paths in moved components, so it builds
+* [theory] react router
+* [demo] add one link to header and point it to EditNotesPage
+* [exercise] create second page with summary
+    1. create new folder summaryPage
+    1. create new component summaryPage and make it display titles of all notes (won't work for now, we broke stuff in our refactor)
+    1. make the new component display some dummy data for now
+    1. npm i --save 'react-router-dom'
+    1. add link to the header and make it work
+* [theory] redux
+    1. [overview](https://i.stack.imgur.com/LNQwH.png)
+    1. [three principles](https://redux.js.org/docs/introduction/ThreePrinciples.html)
+    1. [why to use redux](https://cdn.css-tricks.com/wp-content/uploads/2016/03/redux-article-3-03.svg)
+    1. disadvantages
+* [demo] add redux to to editNotesPage
+* [demo] combining reducers
+* [exercise]
+    1. npm install --save react-redux
+    1. add redux to header
+* [theory] redux vs local state
 
-## Problem - "Idea Journal"
+## Problem - "Add "most important note" page
 
-* make it work with server - CRUD
-* display loading state indicator
-* validate server payload via propTypes
-
-## Exercises
-
-1. display total number of notes in header // passing state down
-1. prevent saving an empty note (button must become disabled)
-1. add propTypes for `Header.js` and `Note.js` components
-1. replace the `default` with your github username in `./src/config/api.js`
-1. run `node upload-data.js`
-
-1. implement "load notes from server" (will be step-by-step walk through) 😈
-1. fetch notes in `componentDidMount` of App.js, transform and save notes to state
-1. in App.js display `<Spinner />` instead of `<NoteList />` during server call
-1. in App.js display 0 notes if there are no notes on server
-1. in App.js display an `errorMessage`
-1. implement <EditNoteModal />
-1. implement note deletion
-1. add propTypes everywhere
+1. add MostImportantNote page
+2. it should display first note in the list
 
 ## Learning resources
 
-* [React Forms](https://reactjs.org/docs/forms.html)
-* [You Might Need Redux](http://redux.js.org/)
-* [You Might Not Need Redux](https://medium.com/@dan_abramov/you-might-not-need-redux-be46360cf367)
-* [Michael Jackson - Never Write Another HoC](https://www.youtube.com/watch?v=BcVAq3YFiuc)
-* [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API)
+* [HTML5 history](https://developer.mozilla.org/en-US/docs/Web/API/History)
+* [React router v4 documentation](https://reacttraining.com/react-router/web/guides/philosophy)
+* [Redux guide](https://redux.js.org/docs/introduction/)

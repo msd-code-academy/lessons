@@ -17,8 +17,7 @@ Join it and ask us about JavaScript, React, Redux, Webpack, API and lot more. Ar
 * 2 (2017-10-19) [React Fundamentals](lesson-2)
 * 3 (2017-10-26) [React Testing](lesson-3)
 * 4 (2017-11-02) [React Async](lesson-4)
-* 5 (2017-11-09) [Webpack](lesson-5)
-* 6 (2017-11-16) [Node.js](lesson-6)
-* 7 (2017-11-23) [Redux I](lesson-7)
-* 8 (2017-11-30) [Redus II](lesson-8)
-* 9 (2017-12-07) [Hackathon](lesson-9) + Beer
+* 5 (2017-11-16) [Redux](lesson-5)
+* 6 (2017-11-23) [Webpack](lesson-6)
+* 7 (2017-11-30) [Node.js](lesson-7)
+* 8 (2017-12-14) [Hackathon](lesson-8) + Beer
