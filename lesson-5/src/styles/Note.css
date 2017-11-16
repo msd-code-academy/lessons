@@ -1,0 +1,30 @@
+.Note {
+    border-radius: 5px;
+    border: 1px solid #DDDDDD;
+    width: 50%;
+    min-height: 120px;
+    margin: 10px;
+    padding: 20px 40px;
+    box-shadow: 2px 2px 8px #000000;
+    word-wrap: break-word;
+}
+
+.Note a {
+    cursor: pointer;
+    color: #880000;
+    font-size: 14px;
+}
+
+.Note a:hover {
+    color: #EE5757;
+}
+
+.Note-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Note-text {
+    padding-bottom: 10px;
+}
