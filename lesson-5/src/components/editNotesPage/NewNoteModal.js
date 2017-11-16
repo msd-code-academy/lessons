@@ -1,7 +1,7 @@
 import React from 'react'
 import Modal from 'react-modal'
 import * as shortId from 'shortid'
-import '../styles/NewNoteModal.css'
+import '../../styles/NewNoteModal.css'
 
 class NewNoteModal extends React.Component {
   constructor() {

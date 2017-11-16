@@ -1,7 +1,7 @@
 import React from 'react'
 
 import EditNoteModal from './EditNoteModal'
-import '../styles/Note.css'
+import '../../styles/Note.css'
 
 class Note extends React.Component {
   state = {

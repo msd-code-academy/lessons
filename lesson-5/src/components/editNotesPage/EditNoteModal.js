@@ -1,6 +1,6 @@
 import React from 'react'
 import Modal from 'react-modal'
-import '../styles/EditNoteModal.css'
+import '../../styles/EditNoteModal.css'
 
 class EditNoteModal extends React.Component {
   constructor(props) {

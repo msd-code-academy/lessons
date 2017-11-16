@@ -1,6 +1,6 @@
 import React from 'react'
 
-import NewNoteModal from './NewNoteModal'
+//import NewNoteModal from './NewNoteModal'
 import logo from '../logo.png'
 import '../styles/Header.css'
 
@@ -20,7 +20,6 @@ class Header extends React.Component {
           <b>IDEA JOURNAL</b>
           <span>{this.getNoteCountMessage(props.noteCount)}</span>
         </div>
-        <NewNoteModal {...props} />
       </div>
     )
   }
