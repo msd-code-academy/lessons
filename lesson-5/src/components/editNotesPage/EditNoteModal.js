@@ -8,7 +8,7 @@ class EditNoteModal extends React.Component {
     this.state = {
       modalIsOpen: false,
       note: {
-        uuid: props.noteId,
+        uuid: props.noteUuid,
         text: props.text,
         title: props.title,
       },

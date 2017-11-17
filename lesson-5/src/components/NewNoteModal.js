@@ -1,7 +1,11 @@
 import React from 'react'
 import Modal from 'react-modal'
+import { connect } from 'react-redux'
+
 import * as shortId from 'shortid'
-import '../../styles/NewNoteModal.css'
+import '../styles/NewNoteModal.css'
+import { actionTypes } from '../Reducer'
+
 
 class NewNoteModal extends React.Component {
   constructor() {
@@ -28,7 +32,8 @@ class NewNoteModal extends React.Component {
     e.preventDefault()
     const { onAddNote } = this.props
     const { note } = this.state
-    onAddNote({ ...note, uuid: shortId.generate() })
+    const newNote = { ...note, uuid: shortId.generate() }
+    this.props.dispatch({ type: actionTypes.NOTE_ADDED, newNote })
     this.toggleModal()
   }
 
@@ -61,4 +66,9 @@ class NewNoteModal extends React.Component {
   }
 }
 
-export default NewNoteModal
+// we are not interested in any updates, we just want to add new notes to store
+function mapStateToProps(state) {
+  return {}
+}
+
+export default connect(mapStateToProps)(NewNoteModal);

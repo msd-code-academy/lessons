@@ -2,7 +2,7 @@ import React from 'react'
 import { Route } from 'react-router-dom'
 import Header from './Header'
 import EditNotesPage from './editNotesPage/EditNotesPage'
-import SummaryPage from './summaryPage/summaryPage'
+import SummaryPage from './summaryPage/SummaryPage'
 import Footer from './Footer'
 
 import '../styles/App.css'

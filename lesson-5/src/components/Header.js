@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-//import NewNoteModal from './NewNoteModal'
+import NewNoteModal from './NewNoteModal'
 import logo from '../logo.png'
 import '../styles/Header.css'
 
@@ -22,7 +22,9 @@ class Header extends React.Component {
           <span>{this.getNoteCountMessage(props.noteCount)}</span>
           <span><Link to="/EditNotes" >Edit Notes</Link></span>
           <span><Link to="/Summary" >Summary</Link></span>
+
         </div>
+        <NewNoteModal />
       </div>
     )
   }

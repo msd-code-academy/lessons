@@ -29,13 +29,29 @@
     1. add redux to header
 * [theory] redux vs local state
 
-## Problem - "Add "most important note" page
+## Changes since end of workshop
 
-1. add MostImportantNote page
-2. it should display first note in the list
+* added [redux-logger](https://github.com/evgenyrodionov/redux-logger) package (dont forget to run 'npm i'), so if you open your browser console, you will see every state change there, [like so](https://user-images.githubusercontent.com/3807458/30935862-4bbd3094-a3d2-11e7-8702-c6222fedc78f.png)
+* removed combining reducers - everything is now in Reducer.js (it was unnecessary so far and confusing)
+* action types are now string constants inside Reducer.js - it's very recommended to use constants instead of typing it in every time
+* connected NewNoteModal.js to redux store and added NOTE_ADDED action - notice how action is dispatched there
+
+## Exercise @home - connect Header to redux store and make it display number of notes
+* it's better to pass to the component only number of notes - this components doesn't need to have access to whole array
+
+## Exercise @home - connect SummaryPage to redux store and make it display all note titles as a list
+
+## Exercise @home (for bonus points) - add MAKE ALL CAPS button
+* add MAKE ALL CAPS button next to edit and remove buttons, that will make make title of the note all UPPER CASE
+* it's useful if you want to easily make a note REALLY IMPORTANT
+* should be done through new action, with action.type = 'NOTE_MAKE_TITLE_ALL_CAPS'
+
+
 
 ## Learning resources
 
-* [HTML5 history](https://developer.mozilla.org/en-US/docs/Web/API/History)
+* [HTML5 history API](https://developer.mozilla.org/en-US/docs/Web/API/History)
 * [React router v4 documentation](https://reacttraining.com/react-router/web/guides/philosophy)
 * [Redux guide](https://redux.js.org/docs/introduction/)
+* [Explain Redux like I'm five](https://dev.to/hemanth/explain-redux-like-im-five)
+* [You Might Not Need Redux](https://medium.com/@dan_abramov/you-might-not-need-redux-be46360cf367)

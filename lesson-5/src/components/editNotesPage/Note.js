@@ -15,7 +15,7 @@ class Note extends React.Component {
   }
 
   render() {
-    const { noteId, title, text, removeNoteFromList } = this.props
+    const { noteUuid, title, text, removeNoteFromList } = this.props
     const { showMore } = this.state
     return (
       <div className="Note">
@@ -23,7 +23,7 @@ class Note extends React.Component {
           <h2>{title}</h2>
           <div>
             <EditNoteModal {...this.props}/>
-            <a onClick={removeNoteFromList(noteId)}>remove</a>
+            <a onClick={removeNoteFromList(noteUuid)}>remove</a>
           </div>
         </div>
         {showMore && <div className="Note-text">{text}</div>}

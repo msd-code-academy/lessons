@@ -10,7 +10,7 @@ class NoteList extends React.Component {
         {notes.map(note => (
           <Note
             key={note.uuid}
-            noteId={note.uuid}
+            noteUuid={note.uuid}
             title={note.title}
             text={note.text}
             editNote={editNote}
