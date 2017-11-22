@@ -15,7 +15,7 @@ class App extends React.Component {
     return (
       <div className="App">
         <Header />
-        <Route path="/EditNotes" component={EditNotesPage} />
+        <Route exact path="/" component={EditNotesPage} />
         <Route path="/Summary" component={SummaryPage}/>
         <Footer />
       </div>

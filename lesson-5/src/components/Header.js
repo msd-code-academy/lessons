@@ -19,8 +19,7 @@ class Header extends React.Component {
         <div className="Header-logo">
           <img src={logo} alt="logo" />
           <b>IDEA JOURNAL</b>
-          <span>{this.getNoteCountMessage(props.noteCount)}</span>
-          <span><Link to="/EditNotes" >Edit Notes</Link></span>
+          <span><Link to="/" >List Notes</Link></span>
           <span><Link to="/Summary" >Summary</Link></span>
 
         </div>
