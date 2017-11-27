@@ -2,8 +2,13 @@ import React from 'react'
 import { connect } from 'react-redux'
 
 import '../../styles/SummaryPage.css'
+import { fetchNotesAsync } from '../../Reducer';
 
 class SummaryPage extends React.Component {
+    componentWillMount() {
+        this.props.dispatch(fetchNotesAsync());
+    }
+    
     render() {
         return (
             <div className="Summary">

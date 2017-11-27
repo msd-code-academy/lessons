@@ -10,9 +10,14 @@ import './styles/index.css';
 import App from './components/App';
 import registerServiceWorker from './registerServiceWorker';
 
-import Reducer from './Reducer'
+import Reducer from './Reducer';
 
-let store = createStore(Reducer, applyMiddleware(logger))
+import thunk from 'redux-thunk';
+
+let store = createStore(Reducer, 
+    applyMiddleware(logger),
+    applyMiddleware(thunk)
+)
 
 ReactDOM.render(
     <Provider store={store}>
