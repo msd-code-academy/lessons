@@ -1,4 +1,5 @@
 import React from 'react'
+import { connect } from 'react-redux'
 
 import '../../styles/SummaryPage.css'
 
@@ -6,11 +7,17 @@ class SummaryPage extends React.Component {
     render() {
         return (
             <div className="Summary">
-                Hi! Im a summary page
+                Number of notes: {this.props.notes.length}
             </div>
         )
     }
 
 }
 
-export default SummaryPage
+function mapStateToProps(state) {
+  return {
+    notes: state.notes
+  }
+}
+
+export default connect(mapStateToProps)(SummaryPage);
