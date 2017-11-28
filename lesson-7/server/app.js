@@ -35,24 +35,28 @@ app.post('/todos/:id', (req, res, next) => {
     const id = req.params.id;
     const item = req.body;
 
-    handleRequest(() => api.createTodoItem(id, item), req, res, next);    
+    handleRequest(() => api.createTodoItem(id, item), req, res, next);
 });
 
 app.put('/todos/:id', (req, res, next) => {
     const id = req.params.id;
     const item = req.body;
-    
-    handleRequest(() => api.updateTodoItem(id, item), req, res, next);    
+
+    handleRequest(() => api.updateTodoItem(id, item), req, res, next);
 });
 
 app.delete('/todos/:id', (req, res, next) => {
     const id = req.params.id;
 
-    handleRequest(() => api.deleteTodoItem(id), req, res, next);    
+    handleRequest(() => api.deleteTodoItem(id), req, res, next);
 });
 
-// start the server
-app.listen(8080, function () {
-    console.log('listening on 8080');
-});
-
+api.initConnectionPool()
+    .then(() => {
+        // start the server
+        app.listen(8080, function () {
+            console.log('listening on 8080');
+        });
+    }).catch(error => {
+        console.error(`connection to db failed: ${error}`);
+    });
