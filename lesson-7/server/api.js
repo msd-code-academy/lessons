@@ -2,19 +2,17 @@ const MongoClient = require('mongodb').MongoClient;
 const config = require('./config');
 
 function executeQuery(query) {
-    return new Promise((resolve, reject) => {
-        MongoClient.connect(config.MONGO_URL).then(database => {
-            var todos = query(database)
+    // obtain connection, execute query, make sure connection is closed
+    return MongoClient.connect(config.MONGO_URL)
+        .then(database =>
+            query(database)
                 .then(result => {
-                    resolve(result);
-                })
-                .catch(err => {
-                    reject('query failed: ' + err);
-                })
-        }).catch(err => {
-            reject('connection failed: ' + err);
-        });
-    });  
+                    database.close();
+                    return result;
+                }).catch(err => {
+                    database.close();
+                    throw err;
+                }));
 }
 
 function getTodoItems() {
@@ -48,7 +46,7 @@ function deleteTodoItem(id) {
 }
 
 module.exports = {
-    getTodoItems, 
+    getTodoItems,
     getTodoItem,
     createTodoItem,
     updateTodoItem,
