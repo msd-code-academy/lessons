@@ -19,84 +19,71 @@ const testItems = [
 ];
 
 describe('todo API Tests', () => {
-    before((done) => {
+    before(() => {
         // initialize the api
-        api.initConnectionPool(config.MONGO_URL, collection)
+        return api.initConnectionPool(config.MONGO_URL, collection)
         .then(() => api.resetCollection().catch(error => { console.log(error) }))
         .then(() => 
             // create test items
-            Promise.all(testItems.map((item) => api.createTodoItem(item._id, item))))
-        .then(() => {
-            done();
-        })
-        .catch(error => {
-            done(error);
-        });
+            Promise.all(testItems.map((item) => api.createTodoItem(item._id, item))));
     });
 
-    after(() => {
-        api.closeConnectionPool();
-    });
+    after(() => api.closeConnectionPool());
 
     describe('test getTodoItems', () => {
-        it('gets all test items', (done) => {
-            api.getTodoItems().then(items => {
+        it('gets all test items', () => {
+            return api.getTodoItems().then(items => {
                 chai.expect(items).to.deep.equal(testItems);
-                done();
             })
         })
     });
 
     describe('test getTodoItem', () => {
-        it('gets todo item by id', (done) => {
-            api.getTodoItem(testItems[0]._id).then(item => {
+        it('gets todo item by id', () => {
+            return api.getTodoItem(testItems[0]._id).then(item => {
                 chai.expect(item).to.deep.equal(testItems[0]);
-                done();
             })
         })
     });
 
     describe('test createTodoItem', () => {
-        it('creates new todo item and retrieves it', (done) => {
+        it('creates new todo item and retrieves it', () => {
             const newItem = {
                 _id: 4,
                 text: "test4"
             }
 
-            api.createTodoItem(newItem._id, newItem)
+            return api.createTodoItem(newItem._id, newItem)
             .then(() => {
                 api.getTodoItem(newItem._id).then(item => {
                     chai.expect(item).to.deep.equal(newItem);
-                    done();
                 })
             });
         })
     });
 
     describe('test updateTodoItem', () => {
-        it('updates an existing todo item and retrieves it', (done) => {
+        it('updates an existing todo item and retrieves it', () => {
             const updatedItem = { ...testItems[0] }
             updatedItem.text = "test1 updated";
 
-            api.updateTodoItem(updatedItem._id, updatedItem)
+            return api.updateTodoItem(updatedItem._id, updatedItem)
             .then(() => {
                 api.getTodoItem(updatedItem._id).then(item => {
                     chai.expect(item).to.deep.equal(updatedItem);
-                    done();
                 })
             });
         })
     });
 
     describe('test deleteTodoItem', () => {
-        it('deletes an existing todo item and checks it is not there anymore', (done) => {
+        it('deletes an existing todo item and checks it is not there anymore', () => {
             const deletedItem = { ...testItems[0] }
 
-            api.deleteTodoItem(deletedItem._id)
+            return api.deleteTodoItem(deletedItem._id)
             .then(() => {
                 api.getTodoItem(deletedItem._id).then(item => {
                     chai.expect(item).to.be.null;
-                    done();
                 })
             });
         })

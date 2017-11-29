@@ -1,10 +1,10 @@
-const MongoClient = require('mongodb').MongoClient;
+const mongodb = require('mongodb');
 
 let database;
 let collectionName;
 
 function initConnectionPool(url, collection = 'todos') {
-    return MongoClient.connect(url).then(db => {
+    return mongodb.MongoClient.connect(url).then(db => {
         database = db;
         collectionName = collection;
     });
@@ -12,8 +12,10 @@ function initConnectionPool(url, collection = 'todos') {
 
 function closeConnectionPool() {
     if(database) {
-        database.close();
+        return database.close();
         database = undefined;
+    } else {
+        return Promise.resolve();
     }
 }
 
