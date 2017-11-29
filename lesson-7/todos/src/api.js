@@ -34,3 +34,10 @@ export function deleteTodo(uuid) {
             return result.json();
         });
 }
+
+export function getSummaryHtml() {
+    return fetch(`${config.BACKEND_URL}/todoViews/summary`)
+    .then(result => {
+        return result.text();
+    });
+}

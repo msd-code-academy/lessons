@@ -4,13 +4,17 @@ export const actionTypes = {
     FETCH_NOTES_COMPLETED: 'FETCH_NOTES_COMPLETED',
     FETCH_NOTES_ERROR: 'FETCH_NOTES_ERROR',
 
+    FETCH_SUMMARY_HTML_COMPLETED: 'FETCH_SUMMARY_HTML_COMPLETED',
+    FETCH_SUMMARY_HTML_ERROR: 'FETCH_SUMMARY_HTML_ERROR',
+
     NOTE_ADDED: 'NOTE_ADDED',
     NOTE_UPDATED: 'NOTE_UPDATED',
     NOTE_DELETED: 'NOTE_DELETED'
 }
 
 const defaultState = {
-    notes: []
+    notes: [],
+    summaryHtml: undefined
 }
 
 export function fetchNotesAsync() {
@@ -25,6 +29,18 @@ export function fetchNotesAsync() {
     };
   }
 
+export function fetchSummaryHtmlAsync() {
+    return dispatch => {
+      api.getSummaryHtml()
+      .then(summaryHtml => {
+        dispatch({ type: actionTypes.FETCH_SUMMARY_HTML_COMPLETED, summaryHtml });
+      })
+      .catch(error => {
+        dispatch({ type: actionTypes.FETCH_SUMMARY_HTML_ERROR, error });
+      });
+    };
+  }
+
 export default function Reducer(state = defaultState, action) {
     switch (action.type) {
         case actionTypes.FETCH_NOTES_COMPLETED:
@@ -33,6 +49,13 @@ export default function Reducer(state = defaultState, action) {
         case actionTypes.FETCH_NOTES_ERROR:
             console.log(action.error); // TODO: client error handling
             return { ...state, notes: [] };
+
+        case actionTypes.FETCH_SUMMARY_HTML_COMPLETED:
+            return { ...state, summaryHtml: action.summaryHtml };
+
+        case actionTypes.FETCH_SUMMARY_HTML_ERROR:
+            console.log(action.error); // TODO: client error handling
+            return { ...state, summaryHtml: undefined };
 
         case actionTypes.NOTE_ADDED:
             const newNote = action.newNote;
