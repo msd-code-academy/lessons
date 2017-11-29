@@ -3,24 +3,14 @@ const bodyParser = require('body-parser');
 const api = require('./api');
 const config = require('./config');
 
+const requestHandler = require('./requestHandler')
+const handleRequest = requestHandler.handleRequest;
+const errorHandler = requestHandler.handleError;
+
 const app = express();
 app.use(bodyParser.json());
 
-function errorHandler(err, req, res, next) {
-    console.error(err);
-    res.status(500);
-    res.json(err);
-}
-
 app.use(errorHandler);
-
-function handleRequest(action, req, res, next) {
-    return action().then(result => {
-        res.json(result);
-    }).catch((error) => {
-        next(error);
-    });
-}
 
 app.get('/todos', (req, res, next) => {
     handleRequest(() => api.getTodoItems(), req, res, next);
