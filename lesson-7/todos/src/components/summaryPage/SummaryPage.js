@@ -1,19 +1,18 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import renderHTML from 'react-render-html';
 
 import '../../styles/SummaryPage.css'
-import { fetchSummaryHtmlAsync } from '../../Reducer';
+import { fetchNotesAsync } from '../../Reducer';
 
 class SummaryPage extends React.Component {
     componentWillMount() {
-        this.props.dispatch(fetchSummaryHtmlAsync());
+        this.props.dispatch(fetchNotesAsync());
     }
     
     render() {
         return (
             <div className="Summary">
-                { this.props.summaryHtml && renderHTML(this.props.summaryHtml) }
+                Number of notes: {this.props.notes.length}
             </div>
         )
     }
@@ -22,7 +21,7 @@ class SummaryPage extends React.Component {
 
 function mapStateToProps(state) {
   return {
-    summaryHtml: state.summaryHtml
+    notes: state.notes
   }
 }
 
