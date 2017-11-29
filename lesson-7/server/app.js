@@ -8,10 +8,9 @@ const handleRequest = requestHandler.handleRequest;
 const errorHandler = requestHandler.handleError;
 
 const app = express();
-app.use(errorHandler);
-
-// REST endpoints
 app.use(bodyParser.json());
+
+app.use(errorHandler);
 
 app.get('/todos', (req, res, next) => {
     handleRequest(() => api.getTodoItems(), req, res, next);
@@ -43,22 +42,9 @@ app.delete('/todos/:id', (req, res, next) => {
     handleRequest(() => api.deleteTodoItem(id), req, res, next);
 });
 
-// Server-side rendering
-app.set('view engine', 'ejs');
-
-app.get('/todoViews/summary', (req, res, next) => {
-    api.getTodoItems()
-    .then((items) => {
-        res.render('summary', { items })
-    })
-    .catch(error => {
-        next(error)
-    });
-});
-
-// start the server
 api.initConnectionPool(config.MONGO_URL)
     .then(() => {
+        // start the server
         app.listen(8080, function () {
             console.log('listening on 8080');
         });
