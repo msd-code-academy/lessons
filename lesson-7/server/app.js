@@ -1,6 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const api = require('./api');
+const config = require('./config');
 
 const app = express();
 app.use(bodyParser.json());
@@ -51,7 +52,7 @@ app.delete('/todos/:id', (req, res, next) => {
     handleRequest(() => api.deleteTodoItem(id), req, res, next);
 });
 
-api.initConnectionPool()
+api.initConnectionPool(config.MONGO_URL)
     .then(() => {
         // start the server
         app.listen(8080, function () {
