@@ -31,20 +31,6 @@ describe('requestHandler tests', () => {
     });
 
     it('handles error results', (done) => {
-        const reqMock = {};
-        const resMock = {};
-        resMock.json = chai.spy();
-        const nextSpy = chai.spy();
-        const testError = 'testerror';
-        const actionStub = sinon.stub().returnsPromise().rejects(testError);
-
-        requestHandler.handleRequest(actionStub, reqMock, resMock, nextSpy).then(() => {
-            chai.expect(resMock.json).to.not.have.been.called();
-            chai.expect(nextSpy).to.have.been.called.with(testError);
-
-            done();
-        }).catch(error => {
-            done(error);
-        })
+        // TODO: test error response case of requestHandler.handleRequest
     })
 });
