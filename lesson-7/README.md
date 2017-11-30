@@ -45,7 +45,7 @@ REST stand for Representational state transfer. Basically, it allows access to t
 - PATCH - partial "write" operations. Used for performing **partial updates**. Unlike the PUT method, where the whole resource should be provided, with the PATCH method you provide only part of the resource to be changed - for example, a specific property. 
 - DELETE - "delete" operations. Used for **deleting** resources. 
 
-Please note that the REST architecture is a client-server model which has some important constraints like statelessness, cacheability and uniform interface (see references for more details).
+Please note that the REST architecture is a client-server model which has some important constraints like statelessness (no client-context stored on server), cacheability and uniform interface (REST-service interfaces follows basic design principles) - see references for more details.
 
 Our resource will be a list of todo items. We will support the following operations:
 - /todos
@@ -62,6 +62,20 @@ Our resource will be a list of todo items. We will support the following operati
 - https://en.wikipedia.org/wiki/Representational_state_transfer
 
 ### Node.js express server
+Node.js is a cross-platform JavaScript runtime environment that is built on the Chrome V8 engine. It is used to execute JavaScript code on the server-side. It is based on modules which are managed by a package manager such as npm. 
+
+It operates on a single thread and the runtime is asynchronous and event-driven. This is important to keep in mind and not to do any blocking operations such as synchronous I/O or long-running functions. As long as operations are performed asynchronously, many requests can be handled concurrently (but not in parallel).
+
+Express is a very popular Node.js application server framework. It creates a layer over the native HTTP and Node.js functionality. It is very extensible and is based on middlewares that handle the request and create the response (for example error handling, request parsing, create json response, ...). In this exercise, we will use it to build our RESTful api. 
+
+#### References
+- https://nodejs.org/en/
+- https://www.npmjs.com/
+- https://softwareengineering.stackexchange.com/questions/190719/the-difference-between-concurrent-and-parallel-execution
+- https://expressjs.com/
+- http://expressjs.com/en/guide/using-middleware.html
+- https://zellwk.com/blog/crud-express-mongodb/
+
 #### Exercise
 - Implement CRUD endpoints (see server/app.js)
 
@@ -74,7 +88,6 @@ Our resource will be a list of todo items. We will support the following operati
 - Add unit test to test the error case of RequestHandler (see test/requestHandler.js). 
 Hint: use `sinon.stub().returnsPromise().rejects(testError)`
 
-### Connecting the frontend
 #### Exercise
 - Add error handling if a request to the backend fails (for example, display a message for the user)
 - Add a spinner while waiting for responses from the backend (see lesson 4)
