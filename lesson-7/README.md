@@ -97,11 +97,31 @@ For the purpose of this lecture, we use a cloud instace created on https://www.m
 - Implement CRUD operations and make tests pass (see `server/api.js`). Run tests using `npm run test`
 
 ### Testing
+As a test runner we use **mocha** as a test runner and **chai** for assertions.
 
+In this exercise we will cover three different kinds of tests:
+- End2end tests which will call the endpoints on http://localhost:8080 (file `e2e-test/e2e.js`). For querying the endpoints we use the module **supertest**.
+- Integration tests which will test the api functions together with the database (file `test/api.js`)
+- Unit tests which independently test certain functions (file `test/requestHandler.js`). The api calls are mocked using **sinon** and **chai-spies**.
+
+#### References
+- https://mochajs.org
+- http://chaijs.com
+- https://github.com/visionmedia/supertest
+- http://sinonjs.org
+- http://chaijs.com/plugins/chai-spies
 
 #### Exercise
 - Add unit test to test the error case of RequestHandler (see `test/requestHandler.js`). 
 Hint: use `sinon.stub().returnsPromise().rejects(testError)`
+
+### Connecting the frontend
+In the last lesson (lesson 6), Redux was used for handling the state of todo items. The state was only kept locally in memory. In this lesson, we want to perform these actions on our backend. Since the calls to the backend are asynchronous, we need a helper library for that. Redux by default supports only synchronous actions.
+
+In this exercise, we will use **redux-thunk** do handle the asynchronous calls to our backend. 
+
+#### References
+- https://github.com/gaearon/redux-thunk
 
 #### Exercise
 - Add error handling if a request to the backend fails (for example, display a message for the user)
