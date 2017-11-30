@@ -1,0 +1,28 @@
+{
+    "definitions": {},
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "$id": "http://example.com/example.json",
+    "type": "array",
+    "items": {
+      "$id": "http://example.com/example.json/items",
+      "type": "object",
+      "properties": {
+        "_id": {
+          "$id": "http://example.com/example.json/items/properties/_id",
+          "type": "string"
+        },
+        "title": {
+          "$id": "http://example.com/example.json/items/properties/title",
+          "type": "string"
+        },
+        "text": {
+          "$id": "http://example.com/example.json/items/properties/text",
+          "type": "string"
+        },
+        "uuid": {
+          "$id": "http://example.com/example.json/items/properties/uuid",
+          "type": "string"
+        }
+      }
+    }
+  }
