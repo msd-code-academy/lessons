@@ -1,4 +1,4 @@
-# Function returns functions
+# Function return function
 
 I got an interesting question recently: _"wtf is the double arrow?"_ (It was not phrased exactly like this tho.) Here it is in action in file [App.js](./idea-journal/solution/src/components/App.js):
 
@@ -23,7 +23,7 @@ var removeNoteFromList = function removeNoteFromList(noteId) {
 };
 ```
 
-Aha! A function that returns a function. Now naturally the next question becomes _"but why?"_ which is an excellent question because all of this is kind of difficult to get used to unless you did a lot of Haskell in the past.
+Aha! A function that returns a function. Now naturally the next question becomes _"but why?"_ which is an excellent question because all of this is kind of difficult to get used to unless you did some Haskell in the past.
 
 The difference is when you use the function. Let's compare it to a simple arrow function in this example:
 
@@ -61,11 +61,11 @@ render() {
   const remover = this.removeSingle.bind(this, noteId)
   return (
     <div>
-      {/* anonymous function; fat arrow binds `this` */}
-      <button onClick={(e) => { this.removeSingle(noteId) }}>
-
-      {/* ... or bound function */}
+      {/* bound function */}
       <button onClick={remover}>
+
+      {/* ... or anonymous function; fat arrow binds `this` */}
+      <button onClick={(e) => { this.removeSingle(noteId) }}>
 
       {/* but! */}
       <button onClick={this.removeDouble(noteId)}>
@@ -98,14 +98,16 @@ class ThisIsHorrible {
   // defined as a oldschool "method"
   brokenFn() { 
     console.log(this, this.javascript)
-    // throws a TypeError: this.setState is not a function
+    // Throws a TypeError: this.setState is not a function because `this` is not what you expect.
+    // (actually a global object: Window)
     this.setState({ output: this.javascript })
   }
 
-  // defined with =
+  // defined with equals = and fat arrow =>
   workingFn = () => {
     console.log(this, this.javascript)
-    // works as expected
+    // Works as expected because `this` is an instance of `ThisIsHorrible` Component
+    // In other words: `this` is bound
     this.setState({ output: this.javascript })
   }
 
