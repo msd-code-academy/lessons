@@ -88,15 +88,15 @@ This concept is somehow but not exactly related to currying (homework: _why?_). 
 
 ## React, classes and misbehaving `this`
 
-This is not directly related to the original question but I want to include it here because is important to understand the most common problem with classes in JS: `this`.
+This is not directly related to the original question but I want to include it here because it is important to understand the most common problem with classes in JS: `this`.
 
 When using classes you need to be careful what exactly is `this` in your code. It may or may not be what you expect. See this code:
 
 ```javascript
 class ThisIsHorrible {
 
-  // defined as a oldschool "method"
-  brokenFn() { 
+  // defined as a oldschool method
+  brokenFn() {
     console.log(this, this.javascript)
     // Throws a TypeError: this.setState is not a function because `this` is not what you expect.
     // (actually a global object: Window)
@@ -118,13 +118,11 @@ class ThisIsHorrible {
 
 For complete mastery and understanding of various rules for `this` I recommend the excellent book [You Don't Know JS: this & Object Prototypes](https://github.com/getify/You-Dont-Know-JS/blob/master/this%20%26%20object%20prototypes/README.md).
 
->Side-Side note: Why did I put "method" in quotes? Because these are not methods. They may look like one but are functions. `{ foo() {} }` [is a shorthand](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions) for `{ foo: function foo() {} }`.
-
 ## ES6 and stages and transpiling
 
-This is even less related but I also want to include it here because you may wonder why none of these examples actually work when you copy and paste then in your browser console or run it without transpiling first.
+This is even less related but I also want to include it here because you may wonder why none of these examples actually work when you copy and paste them in your browser console or run it without transpiling first.
 
-This is because the _"equals"_ definition is not standard and `workingFn = ` throws a SyntaxError. It is actually a [Candidate (Stage 3) proposal](https://github.com/tc39/proposal-class-fields) which means it may or may not become part of the language. You will need babel to transpile it. 
+This is because the _"equals"_ definition is not standard and `workingFn = ` throws a SyntaxError. It is actually a [Candidate (Stage 3) proposal](https://github.com/tc39/proposal-class-fields) which means it may or may not become part of the language. You will need babel to transpile it.
 
 If you wish to learn more about the ES Stages see the [official document](https://github.com/tc39/proposal-class-fields) and [explanation by Alex Rauschmayer](http://2ality.com/2015/11/tc39-process.html).
 
