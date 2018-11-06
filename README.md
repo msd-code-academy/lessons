@@ -2,6 +2,8 @@
 
 Materials for Javascript Code Academy, updated for second run starting October 2017.
 
+Please run `npm audit` before using any of our examples at a later date (the 3rd party dependencies might receive important security updates).
+
 ## Community
 
 We believe in giving back to the community. We are group of people who would like to see even more junior and senior developers to start using React.

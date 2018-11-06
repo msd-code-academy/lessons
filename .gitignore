@@ -26,9 +26,6 @@ coverage
 # node-waf configuration
 .lock-wscript
 
-# Compiled binary addons (http://nodejs.org/api/addons.html)
-build/Release
-
 # Dependency directories
 node_modules
 jspm_packages
@@ -51,3 +48,11 @@ jspm_packages
 # IDE stuff
 *.iml
 /.idea
+
+# moved from nested .gitignore files
+/build
+.DS_Store
+
+# do not endorse out of date library versions (see README)
+package-lock.json
+yarn.lock
